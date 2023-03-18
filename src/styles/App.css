@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*  menu bar */
+
+.menu-outer{
+    display: flex;
+    background-color:#2874f0;
+    list-style: none;
+    width: 100%;
+    margin-top: 0px;
+    height: 55px;
+}
+.logo-outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23%;
+}
+.logo{
+    width: 85px;
+    height: 32px;
+}
+.searchbar-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchbar{
+    width: 350px;
+    height: 37px;
+    margin: 0 auto 0 12px;
+    color: rgb(61, 61, 61);
+    border: 1px solid rgb(61, 61, 61);
+    border-radius: 2px;
+}
+.logbtn-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.log-btn{
+    color: #2874f0;
+    font-size: 20px;
+    border: 1px solid #2874f0;
+    background-color: white;
+    margin: 0 auto 0 20px;
+    width: 105px;
+    height: 35px;
+    border-radius: 2px;
+    
+}
+
+.seller-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seller{
+    margin: 0 auto 0 40px;
+    color: white;
+    font-size: 17px;
+}
+
+
+/* cart -logo - css */
+
+.cartlogo-outer{
+    margin-left: 2%;
+    text-align: center;
+    display: flex;
+
+}
+.cartlogo-img{
+    width:70%;
+    margin-top: 7px;
+    
+}
+.cartlogo-count{
+ color: antiquewhite;
+ font-size: 25px;
+ margin-top: 13px;
+ margin-left: 1px;
+
+}
+
+
+
+
+/* cart page css  */
+.cart-container{
+    width: 70%;
+    height: 50%;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: rgb(249, 249, 249);
+    border: 2px solid black;
+}
+
+.cart-list-img{
+    width: 190px;
+    height: 160px;
+    padding: 15px;
+}
+.cart-discription{
+    margin: 7px;
+}
+.cart-functions{
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    padding-top: 20px;
+}
+.increase-btn{
+    width: 40px;
+    height: 25px;
+    border-radius: 7px;
+    font-size: 20px;
+    margin-left: 10%;
+}
+.count-display{
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.decrease-btn{
+    width: 40px;
+    height: 25px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+
+/* banner 1 */
+.banner-container{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+   
+}
+.bannerone-img{
+    width: 100%;
+}
+
+/* catogory page */
+
+.displayone{
+    columns: 50px 5;
+}
+.displayitem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+    border-radius: 5px;
+    
+    margin: 10px;
+} 
+.rating{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 40px;
+    
+
+}
+.display-rate{
+    display: flex;
+    margin-bottom: 10px;
+}
+.display-rate1{
+    margin-left: 20px;
+    padding-right: 40%;
+}
+.display-rate2{
+    text-align: center;
+    border: 1px solid rgb(22, 121, 27);
+    width: 30px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(22, 121, 27);
+}
+
+/* main for item */
+.displaytwo{
+    background-color: rgb(241, 242, 242);
+    padding: 10px;
+    border-radius: 5px;
+    height: 350px;
+    margin-bottom: 50px;
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 0 1px 2px;
+}
+.btn-cat{
+    color: white;
+    background-color: #fb641b;
+    border: 1px solid #fb641b;
+    border-radius: 2px;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+}
+.displaytwo > p{
+    font-size: 12px;
+}
+
+
+
+/* product id page (part 2) */
+.product-detail-container{
+    display: flex;
+    padding-top: 100px;
+}
+.product-detail-imgouter{
+    padding: 30px;
+}
+.product-details-img{
+    width: 300px;
+    height: 300px;
+        
+}
+.product-details{
+
+    border: 2px solid rgb(235, 236, 236);
+    background-color: rgb(235, 236, 236);
+    border-radius: 5px;
+    margin-left: 100px;
+    width: 600px;
+}
+
+
+/* footer */
+
+.footer-outer{
+    background-color: rgb(8, 22, 57);
+    height: 200px;
+}
+
+
+
+/* prsponsive section */
+
+@media screen and (max-width: 900px) {
+    .displayone{
+        columns: 50px 3;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .displayone{
+        columns: 50px 2;
+    }
+    
+}
+  

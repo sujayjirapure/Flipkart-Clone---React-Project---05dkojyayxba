@@ -1,4 +1,4 @@
-import React ,{useContext } from 'react'
+import React ,{useContext ,useEffect } from 'react'
 import { Link ,useNavigate } from "react-router-dom";
 import '../styles/App.css';
 import {Appdata} from './App'
@@ -7,6 +7,11 @@ const Menubar = () => {
   const context = useContext(Appdata);
 
 
+  const logoutfn = () => {
+    context.setStatus(false);
+  }
+
+  //console.log("-------------------",context.loginformdata.username); //working ok bt only on when login 
   return (
     <div className='menu-outer'>
       <div className='logo-outer' >
@@ -20,10 +25,24 @@ const Menubar = () => {
       </div>
       
       <div className='logbtn-outer'>
-        <button className='log-btn'>Login</button>
+        {
+          context.loginstatus
+          ?
+          <button className='log-btn' onClick={logoutfn}>Logout</button>
+          :
+          <Link to={'./login'}>
+            <button className='log-btn'>Login</button> 
+          </Link>
+        }
+
       </div>
       <div className='seller-outer'>
+        {
+          context.loginstatus ?
+          <p className='seller'>Hi {context.loginformdata.username}</p> :
           <p className='seller'>Become a Seller</p>
+        }
+          
       </div>
         <div className='cartlogo-outer'>
           <Link to={`/cart`}>

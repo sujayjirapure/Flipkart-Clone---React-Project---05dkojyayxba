@@ -32,6 +32,8 @@ const Product = () => {
                 <h3>Price :- ${products.price}</h3>
                 <br></br>
                 <br></br>
+                {products.rating && products.rating.count}      
+                {/* depask sir to acces nested json */}
                 <br></br>
                 
                 

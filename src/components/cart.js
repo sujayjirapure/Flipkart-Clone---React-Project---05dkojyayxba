@@ -5,7 +5,9 @@ import '../styles/App.css';
 const Cart = () => {
 
   const context = useContext(Appdata);
-
+  // useEffect(() => {
+  //   console.log("",context.data);
+  // });
   const [count ,setCount] = useState(0);
 
   const increase = () => {
@@ -34,7 +36,6 @@ const Cart = () => {
               <div className="cart-functions">
                 <button className="increase-btn" onClick={increase}>+</button>
                 <div className="count-display">{count}</div>
-                
                 <button className="decrease-btn" onClick={decrease}>-</button>
                 
               </div>

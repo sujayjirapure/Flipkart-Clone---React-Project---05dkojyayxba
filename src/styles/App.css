@@ -212,6 +212,51 @@
 
 
 
+/* login page css */
+.login-outter{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    
+}
+.login-card{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid #2874f0;
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #2874f0;
+    color: white;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.btn-loginfn{
+ color: white;
+ background-color: #fb641b;
+ width: 100px;
+ height: 30px;
+ border-radius: 5px;
+}
+.btn-loginfn{
+    width: 200px;
+    font-size: 20px;
+
+}
+.login-outter > h2{
+    color: rgb(35, 79, 118);
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10%;
+}
+
+
+
+
+
+
+
 /* product id page (part 2) */
 .product-detail-container{
     display: flex;

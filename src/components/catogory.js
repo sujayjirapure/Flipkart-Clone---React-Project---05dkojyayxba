@@ -13,9 +13,12 @@ const Catogory = () => {
   const viewdfn = () => {
     tempnavi(`/product/${product.id}`);
   }
-
+  
   const addtocart = (val) => {
     let tempnew = context.data.find((item)=> val === item.id);
+    if(context.cart === tempnew){
+        count = count + 1;
+    }
     context.setCart([...context.cart, tempnew]);
   }
 

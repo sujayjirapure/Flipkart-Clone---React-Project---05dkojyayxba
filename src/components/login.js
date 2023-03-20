@@ -22,7 +22,7 @@ const Loginfn = () => {
             ...loginformdata, ...tempObj
         });
     }
-    const tempnavigate = useNavigate();
+    
 
     const loginfn = () => {
 
@@ -42,6 +42,13 @@ const Loginfn = () => {
         setFormdata(initialData);
     }
 
+    //navigate
+    // const tempnavigate = useNavigate();
+    // const logoutfn = () => {
+    //     tempnavigate('./register');
+    // }
+
+
     useEffect(() => {
         //let temp = localStorage.getItem('user');   //getting data from loacl storage (syntax)
         //console.log(JSON.parse(temp));
@@ -53,27 +60,45 @@ const Loginfn = () => {
   return (
 
     <div className='login-outter'>
+        
             {
                 loginstatus ?
-                <h2>Successfully login</h2>
+                <div className='suc-msg'><h2>Successfully login</h2></div>
                 
                  :
-                <div className='login-card'>
+                <div className='login-card-outer'>
+                    <div className='login-card-one'>
+                        <h2>Login</h2>
+                        <br></br>
+                        <br></br>
+                        <h5>Get access to your Orders, Wishlist and Recommendations</h5>
+                        <br></br>
+                        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png" />
+                    </div>
 
-                    Name- <input type="text" id="username" onChange={updateData} value={loginformdata.username} />
-                    <br></br>
-                    <br></br>
-                    Mobile- <input type="password" id="password" onChange={updateData} value={loginformdata.password}/>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <button className='btn-loginfn' onClick={loginfn}>Login</button>
-                    <br></br>
-                    <br></br>
-                    Note - Please enter same username and password which is use at time of registration
+                    <div className='login-card-two'>
+
+                        Name- <input type="text" id="username" onChange={updateData} value={loginformdata.username} />
+                        <br></br>
+                        <br></br>
+                        Mobile- <input type="password" id="password" onChange={updateData} value={loginformdata.password}/>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <button className='btn-loginfn' onClick={loginfn}>Login</button>
+                        <br></br>
+                        <br></br>
+                        <Link to={`/register`}>
+                            <button className='btn-loginfn'>Register</button>
+                        </Link>
+                        <br></br>
+                        <br></br>
+                        Note - Please enter same username and password which is use at time of registration
+                    </div>
                 </div>
             }
-    </div>
+        
+        </div>
   )
 }
 

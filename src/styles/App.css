@@ -217,24 +217,44 @@
     padding: 2px;
     display: flex;
     justify-content: center;
+    bottom: 0;
+    width: 100%;
+    border: 2px solid rgb(98, 96, 96);
+    background-color: rgb(226, 226, 226);
     
 }
-.login-card{
+
+.login-card-outer{
+    width: 600px;
+    height: 400px;
     margin-top: 50px;
-    margin-bottom: 50px;
-    border: 2px solid #2874f0;
-    width: 350px;
-    height: 250px;
-    border-radius: 10px;
+    margin-bottom: 65px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.login-card-one{
     background-color: #2874f0;
+    width: 250px;
+    box-shadow: 5px 5px 15px black;
+    padding: 2px;
     color: white;
     text-align: center;
-    padding-top: 2%;
+    padding-top: 50px;
+}
+.login-card-two{
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    text-align: center;
+    padding-top: 10%;
+    box-shadow: 5px 5px 15px black;
 }
 
 .btn-loginfn{
  color: white;
  background-color: #fb641b;
+ border: 1px solid #fb641b;
  width: 100px;
  height: 30px;
  border-radius: 5px;
@@ -244,11 +264,12 @@
     font-size: 20px;
 
 }
-.login-outter > h2{
+.suc-msg{
     color: rgb(35, 79, 118);
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     padding-top: 10%;
+    padding-bottom: 335px;
 }
 
 

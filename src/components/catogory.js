@@ -10,15 +10,20 @@ const Catogory = () => {
 
   //navigation function
   const tempnavi = useNavigate();
-  const viewdfn = () => {
-    tempnavi(`/product/${product.id}`);
-  }
+//   const veiwpro = () => {
+    
+//   }
   
+   const veiwpro = (val) => {
+     let tempnew = context.data.find((item)=> val === item.id);
+     context.setProductid([tempnew]);
+//productid, setProductid
+    tempnavi(`/product`);
+   }
+   
+
   const addtocart = (val) => {
     let tempnew = context.data.find((item)=> val === item.id);
-    if(context.cart === tempnew){
-        count = count + 1;
-    }
     context.setCart([...context.cart, tempnew]);
   }
 
@@ -42,9 +47,7 @@ const Catogory = () => {
                             </div>
                         </div>
                             
-                        <Link to={`/product/${item.id}`}>
-                            <button className="btn-cat">View details</button>
-                        </Link>
+                        <button className="btn-cat" onClick={()=>veiwpro(item.id)}>View</button>
                         
                         <button className="btn-cat" onClick={()=>addtocart(item.id)}>Add to cart</button>
                     </div>

@@ -78,11 +78,11 @@ const Loginfn = () => {
 
                     <div className='login-card-two'>
                     
-                        Name- <input type="text" id="username" onChange={updateData} value={loginformdata.username} />
+                        Username- <input type="text" id="username" onChange={updateData} value={loginformdata.username} />
                         
                         <br></br>
                         <br></br>
-                        Mobile- <input type="password" id="password" onChange={updateData} value={loginformdata.password}/>
+                        Password- <input type="password" id="password" onChange={updateData} value={loginformdata.password}/>
                         <br></br>
                         <br></br>
                         <br></br>
@@ -93,8 +93,7 @@ const Loginfn = () => {
                             <button className='btn-loginfn'>Register</button>
                         </Link>
                         <br></br>
-                        <br></br>
-                        Note - Please enter same username and password which is use at time of registration
+                        
                     </div>
                 </div>
             }

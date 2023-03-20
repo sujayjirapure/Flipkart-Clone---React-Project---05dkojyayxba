@@ -1,6 +1,7 @@
 import React,{ useEffect , useState ,useContext } from "react";
 import { Appdata } from "./App";
 import '../styles/App.css';
+import { AiOutlineStar } from "react-icons/ai";
 
 const Product = () => {
 
@@ -35,7 +36,7 @@ const Product = () => {
                  <h3>Price :- ${item.price}</h3>
                  <br></br>
                 <div className="display-rate2">
-                    {item.rating.rate}
+                    {item.rating.rate} <AiOutlineStar/>
                 </div>
                 <br></br>
                 <br></br>

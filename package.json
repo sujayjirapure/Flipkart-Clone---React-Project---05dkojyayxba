@@ -15,6 +15,7 @@
     "dynamic-routes-webpack-plugin": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^4.8.0",
     "react-router-dom": "^6.9.0"
   },
   "jest": {

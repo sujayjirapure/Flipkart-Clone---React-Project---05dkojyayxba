@@ -1,10 +1,12 @@
 import React,{ useEffect , useState ,useContext } from "react";
+import { Link ,useNavigate } from "react-router-dom";
 import { Appdata } from "./App";
 import '../styles/App.css';
 
 const Cart = () => {
 
   const context = useContext(Appdata);
+  const [pricetot ,setpricetot] = useState([]); //price total state
   // useEffect(() => {
   //   console.log("",context.data);
   // });
@@ -17,9 +19,13 @@ const Cart = () => {
     setCount((count) => count - 1);
   }
 
+  const navigatemodal = () => {
+
+  }
   return (
     <>
-      <div className="main">
+      <div className="cart-main">
+      <div className="cart-main-inner">
       {
         context.cart.map((item) => (
           <div className="cart-container">
@@ -44,26 +50,14 @@ const Cart = () => {
         ))
       }
       </div>
+      <div className="btn-modal-outer">
+      <Link to={`/payment`}>
+        <button className="btn-modal" onClick={navigatemodal}>Complete payment</button>
+      </Link>
+      </div>
+      </div>
     </>
 
-    // {/* <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-    //             <Button startDecorator={<Add />}>Add more</Button>
-    //             <span>Quantity</span>
-                
-    //             <Button
-    //               variant="soft"
-    //               endDecorator={<KeyboardArrowRight />}
-    //               color="success"
-    //             >
-    //              - Remove 
-    //             </Button>
-    //             <div>
-    //               <button onClick={decrement} className="decrement">-</button>
-    //               <span>{count}</span>
-    //               <button onClick={increment} className="increment">+</button>
-    //             </div>
-    //           </Box> */}
-    ///////////////////////////////////////////////////////////////
   )
 }
 

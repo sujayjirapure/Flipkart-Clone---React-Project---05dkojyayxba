@@ -3,6 +3,7 @@ import { Appdata } from "./App";
 import { Link ,useNavigate } from "react-router-dom";
 import Bannerone from "./bannerone";
 import '../styles/App.css';
+import { AiOutlineStar } from "react-icons/ai";
 
 const Catogory = () => {
 
@@ -42,7 +43,7 @@ const Catogory = () => {
                                 $ {item.price}
                             </div>
                             <div className="display-rate2">
-                                {item.rating.rate}
+                                {item.rating.rate} <AiOutlineStar/>
                             </div>
                         </div>
                             

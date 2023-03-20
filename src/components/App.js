@@ -8,6 +8,7 @@ import Product from './product.js';
 import Cart from './cart.js';
 import Register from './register.js';
 import Loginfn from './login';
+import Paymentmodal from './payment';
 import { createContext, useState, useEffect } from "react";
 
 export const Appdata = createContext();
@@ -57,6 +58,7 @@ const [loginformdata, setFormdata] = useState(initialData);
             <Route path='/cart' element={<Cart/>} />
             <Route path='/login' element={<Loginfn/>} />
             <Route path='/register' element={<Register/>} />
+            <Route path='/payment' element={<Paymentmodal/>} />
 
             <Route path='/' element={<Catogory />} />
             <Route path="/*" element={<Notfound />} />

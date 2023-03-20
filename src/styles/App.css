@@ -97,13 +97,14 @@
 
 /* cart page css  */
 .cart-container{
-    width: 70%;
+    width: 99%;
     height: 50%;
     margin: 5px;
     display: flex;
     flex-direction: row;
     border-radius: 5px;
     background-color: rgb(249, 249, 249);
+    
     border: 2px solid black;
 }
 
@@ -139,6 +140,35 @@
     border-radius: 7px;
     font-size: 20px;
 }
+
+.btn-modal{
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: #fb641b;
+    border: 1px solid #fb641b;
+}
+.btn-modal:hover{
+    background-color: #f27b40;
+    color: white;
+}
+.cart-main-inner{
+    width: 71%;
+}
+.btn-modal-outer{
+    margin: 2px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 20px;
+}
+
+
+
+
+
 
 
 /* banner 1 */
@@ -184,12 +214,13 @@
     padding-right: 40%;
 }
 .display-rate2{
-    text-align: center;
+    
     border: 1px solid rgb(22, 121, 27);
-    width: 30px;
-    border-radius: 20px;
+    width: 40px;
+    border-radius: 15px;
     color: white;
     background-color: rgb(22, 121, 27);
+    display: flex;
     
 }
 
@@ -328,6 +359,45 @@
     background-color: rgb(8, 22, 57);
     height: 200px;
 }
+
+
+
+
+/* Payment modal css */
+.payment-outter{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(231, 231, 231);
+    z-index: 1000;
+}
+.payment-inner{
+    border: 2px solid grey;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    z-index: 1000;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 5px 5px 15px grey;
+}
+
+.payment-close {
+    margin-top: 10px;
+    margin-left: 280px;
+    margin-bottom: 50px;
+    width: 80px;
+    font-size: 20px;
+}
+
+
+
+
 
 
 

@@ -53,6 +53,11 @@
     border-radius: 2px;
     
 }
+.log-btn:hover{
+    background-color: #2874f0;
+    color: white;
+    border: 2px solid white;
+}
 
 .seller-outer{
     display: flex;
@@ -185,6 +190,7 @@
     border-radius: 20px;
     color: white;
     background-color: rgb(22, 121, 27);
+    
 }
 
 /* main for item */
@@ -262,7 +268,9 @@
 .btn-loginfn{
     width: 200px;
     font-size: 20px;
-
+}
+.btn-loginfn:hover{
+    background-color: #f98449;
 }
 .suc-msg{
     color: rgb(35, 79, 118);
@@ -273,8 +281,20 @@
 }
 
 
-
-
+/* single product view page */
+.btn-pro-cat{
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: #fb641b;
+    border: 1px solid #fb641b;
+}
+.btn-pro-cat:hover{
+    background-color: #f27b40;
+    color: white;
+}
 
 
 
@@ -282,6 +302,7 @@
 .product-detail-container{
     display: flex;
     padding-top: 100px;
+    padding-bottom: 50px;
 }
 .product-detail-imgouter{
     padding: 30px;
@@ -289,15 +310,15 @@
 .product-details-img{
     width: 300px;
     height: 300px;
-        
 }
 .product-details{
-
     border: 2px solid rgb(235, 236, 236);
     background-color: rgb(235, 236, 236);
     border-radius: 5px;
     margin-left: 100px;
-    width: 600px;
+    width: 650px;
+    padding-left: 30px;
+    padding-top: 30px;
 }
 
 

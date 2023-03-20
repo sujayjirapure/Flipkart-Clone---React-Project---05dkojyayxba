@@ -17,7 +17,6 @@ const Catogory = () => {
    const veiwpro = (val) => {
      let tempnew = context.data.find((item)=> val === item.id);
      context.setProductid([tempnew]);
-//productid, setProductid
     tempnavi(`/product`);
    }
    

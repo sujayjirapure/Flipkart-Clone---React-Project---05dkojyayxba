@@ -77,8 +77,9 @@ const Loginfn = () => {
                     </div>
 
                     <div className='login-card-two'>
-
+                    
                         Name- <input type="text" id="username" onChange={updateData} value={loginformdata.username} />
+                        
                         <br></br>
                         <br></br>
                         Mobile- <input type="password" id="password" onChange={updateData} value={loginformdata.password}/>

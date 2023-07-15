@@ -26,14 +26,14 @@ const Catogory = () => {
     let tempnew = context.data.find((item)=> val === item.id);
     context.setCart([...context.cart, tempnew]);
   }
-
+  console.log("record data is cat page --------------------",context.record);
   return (
     <div>
-        < Bannerone/>
+        
         <div className="displayone">
 
             {
-                context.data.map((item,index) => (
+                context.record.map((item,index) => (
                     <div className="displaytwo">
                         <img src={item.image} className="displayitem" />
                         <p>{item.title}</p> 
@@ -42,9 +42,9 @@ const Catogory = () => {
                             <div className="display-rate1">
                                 $ {item.price}
                             </div>
-                            <div className="display-rate2">
+                            {/* <div className="display-rate2">
                                 {item.rating.rate} <AiOutlineStar/>
-                            </div>
+                            </div> */}
                         </div>
                             
                         <button className="btn-cat" onClick={()=>veiwpro(item.id)}>View</button>

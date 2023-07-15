@@ -25,7 +25,8 @@ const Loginfn = () => {
     
 
     const loginfn = () => {
-
+        console.log(loginformdata.username);
+        console.log(loginformdata.password);
         //setStatus(true);
         let temp = JSON.parse(localStorage.getItem('user'));
         let username = loginformdata.username;
@@ -39,7 +40,7 @@ const Loginfn = () => {
             }
         }
 
-        setFormdata(initialData);
+        //setFormdata(initialData);
     }
 
     //navigate
@@ -62,7 +63,8 @@ const Loginfn = () => {
     <div className='login-outter'>
         
             {
-                loginstatus ?
+                loginstatus 
+                ?
                 <div className='suc-msg'><h2>Successfully login</h2></div>
                 
                  :
@@ -93,7 +95,6 @@ const Loginfn = () => {
                             <button className='btn-loginfn'>Register</button>
                         </Link>
                         <br></br>
-                        
                     </div>
                 </div>
             }

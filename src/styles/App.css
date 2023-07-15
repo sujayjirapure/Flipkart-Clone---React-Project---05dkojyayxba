@@ -187,6 +187,8 @@
 
 .displayone{
     columns: 50px 5;
+    border: 2px solid blue;
+    
 }
 .displayitem{
     display: flex;
@@ -401,7 +403,7 @@
 
 
 
-/* prsponsive section */
+/* responsive section */
 
 @media screen and (max-width: 900px) {
     .displayone{
@@ -410,12 +412,27 @@
     
 }
 
-
+@media screen and (max-width: 768px) {
+    .displayone{
+        columns: 50px 2;
+    }
+    .menu-outer{
+        display: flex;
+        background-color:#2874f0;
+        list-style: none;
+        width: 900px;
+        margin-top: 0px;
+        height: 55px;
+    }
+    
+    
+}
 
 @media screen and (max-width: 550px) {
     .displayone{
         columns: 50px 2;
     }
+    
     
 }
   

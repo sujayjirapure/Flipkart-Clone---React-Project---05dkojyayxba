@@ -1,11 +1,23 @@
-import React ,{useContext ,useEffect } from 'react'
+import React ,{useContext ,useEffect} from 'react'
 import { Link ,useNavigate } from "react-router-dom";
 import '../styles/App.css';
 import {Appdata} from './App'
 
 const Menubar = () => {
   const context = useContext(Appdata);
+  
+ // const [input, setInput] = useState("");
 
+  //console.log("data is inside that menubar-",context.data); 
+  // const handlechnage = (value) => {
+  //   context.setSerachinput(value);   //input send to app.js
+  // };
+  const filter = (event) => {
+    context.setRecord(
+      context.data.filter((f) => f.title.toLowerCase().includes(event.target.value))
+    );
+  };
+  console.log("record data is cat page --------------------",context.record);
 
   const logoutfn = () => {
     context.setStatus(false);
@@ -20,7 +32,12 @@ const Menubar = () => {
       </Link>
       </div>
       <div className='searchbar-outer'>
-        <input type="text" className='searchbar' placeholder="   Search for products ,brands and more... " />
+        <input type="text" 
+        className='searchbar' 
+        placeholder="   Search for products ,brands and more... "
+        onChange={filter} 
+        />
+
         <svg width={20} height={20} viewBox="0 0 17 18" className xmlns="http://www.w3.org/2000/svg"></svg>
       </div>
       
@@ -38,8 +55,10 @@ const Menubar = () => {
       </div>
       <div className='seller-outer'>
         {
-          context.loginstatus ?
-          <p className='seller'>Hi {context.loginformdata.username}</p> :
+          context.loginstatus 
+          ?
+          <p className='seller'>Hi {context.loginformdata.username}</p> 
+          :
           <p className='seller'>Become a Seller</p>
         }
           

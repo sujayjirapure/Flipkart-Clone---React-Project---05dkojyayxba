@@ -34,6 +34,7 @@ const Product = () => {
                  <br></br>
                  <br></br>
                  <h3>Price :- ${item.price}</h3>
+                 
                  <br></br>
                 <div className="display-rate2">
                     {item.rating.rate} <AiOutlineStar/>

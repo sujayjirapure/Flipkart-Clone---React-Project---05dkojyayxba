@@ -38,6 +38,9 @@ const Cart = () => {
                 <p className="description">{item.description.slice(0,150)}</p>
                 <br></br>
                 <h3>Price : ${item.price}</h3>
+                <br></br>
+                <h6>Normal amount :- {item.price}</h6>
+                (After adding 5% GST) Total :-{item.price / 100 * 5 + item.price} 
               </div>
               <div className="cart-functions">
                 <button className="increase-btn" onClick={increase}>+</button>

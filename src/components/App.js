@@ -10,6 +10,7 @@ import Register from './register.js';
 import Loginfn from './login';
 import Paymentmodal from './payment';
 import { createContext, useState, useEffect } from "react";
+import axios from "axios";
 
 export const Appdata = createContext();
 
@@ -20,6 +21,9 @@ const App = () => {
   const [cart, setCart] = useState([]); // 0 item in cart array of object
   const [loginstatus, setStatus] = useState(false); //login status
   const [productid, setProductid] = useState([]); // productid
+  const [serachinput , setSerachinput] = useState("");   //input sreach get back scuessfully
+  const [record ,setRecord] = useState([data]);
+  const [loginformdata, setFormdata] = useState(initialData);
   
   //login info
   const initialData = {
@@ -28,28 +32,30 @@ const App = () => {
   }
 
 //state object for formdata
-const [loginformdata, setFormdata] = useState(initialData);
-
 
   useEffect(() => {
 
-    async function fetchData() {
-      try {
-        const response = await fetch("https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products");
-        const json = await response.json();
-        setData(json);
-      } catch (error) {
-        console.error(error);
-      }
+    function fetchData() {
+      axios
+      .get(
+        "https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products"
+      )
+      .then((res) => {
+        setData(res.data);
+        setRecord(res.data);
+        console.log(record);
+      })
+      .catch((err) => console.log(err));
     }
 
     fetchData();
   }, []);
 
-//console.log(data);
+
+console.log("record data is --------------------",record);
   return (
     <div id="main">
-          <Appdata.Provider value={{ data, setData, cart, setCart ,loginstatus ,setStatus ,loginformdata, setFormdata ,productid, setProductid}}> 
+          <Appdata.Provider value={{ data, setData, cart, setCart ,loginstatus ,setStatus ,loginformdata, setFormdata ,productid, setProductid ,record,setRecord}}> 
      <BrowserRouter>
         <Menubar/>
           <Routes>

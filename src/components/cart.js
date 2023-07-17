@@ -20,6 +20,7 @@ const Cart = () => {
   }
 
   const navigatemodal = () => {
+    
 
   }
   return (

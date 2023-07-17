@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
     "dynamic-routes-webpack-plugin": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

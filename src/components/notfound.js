@@ -7,6 +7,9 @@ const Notfound = () => {
   return (
     <div>
         Not found pagen 11
+        
+  
+  
     </div>
   )
 }

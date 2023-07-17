@@ -14,34 +14,34 @@ const Loginfn = () => {
     //state varibel to store api data response
     //const [apiresponse, setApiresponse] = useState({});
 
-    const updateData = (e) => {
-        console.log(e.target.id, e.target.value);
-        let tempObj = {};
-        tempObj[e.target.id] = e.target.value.trim();
-        setFormdata({
-            ...loginformdata, ...tempObj
-        });
-    }
+    // const updateData = (e) => {
+    //     console.log(e.target.id, e.target.value);
+    //     let tempObj = {};
+    //     tempObj[e.target.id] = e.target.value.trim();
+    //     setFormdata({
+    //         ...loginformdata, ...tempObj
+    //     });
+    // }
     
 
-    const loginfn = () => {
-        console.log(loginformdata.username);
-        console.log(loginformdata.password);
-        //setStatus(true);
-        let temp = JSON.parse(localStorage.getItem('user'));
-        let username = loginformdata.username;
-        let password = loginformdata.password;
+    // const loginfn = () => {
+    //     //console.log(loginformdata.username);
+    //     //console.log(loginformdata.password);
+    //     //setStatus(true);
+    //     let temp = JSON.parse(localStorage.getItem('user'));
+    //     let username = loginformdata.username;
+    //     let password = loginformdata.password;
 
-        for(let i=0; i<temp.length ; i++){
-            if(temp[i].username === loginformdata.username){
-                if(temp[i].password === loginformdata.password){
-                    setStatus(true);
-                }
-            }
-        }
+    //     for(let i=0; i<temp.length ; i++){
+    //         if(temp[i].username === loginformdata.username){
+    //             if(temp[i].password === loginformdata.password){
+    //                 setStatus(true);
+    //             }
+    //         }
+    //     }
 
-        //setFormdata(initialData);
-    }
+    //     //setFormdata(initialData);
+    // }
 
     //navigate
     // const tempnavigate = useNavigate();
@@ -50,24 +50,27 @@ const Loginfn = () => {
     // }
 
 
-    useEffect(() => {
-        //let temp = localStorage.getItem('user');   //getting data from loacl storage (syntax)
-        //console.log(JSON.parse(temp));
-        const items = JSON.parse(localStorage.getItem('user'));
-        console.log("login stst-",loginstatus);
-        console.log("login stst-",items);
-    },[loginstatus])
+    // useEffect(() => {
+    //     //let temp = localStorage.getItem('user');   //getting data from loacl storage (syntax)
+    //     //console.log(JSON.parse(temp));
+    //     const items = JSON.parse(localStorage.getItem('user'));
+    //     console.log("login stst-",loginstatus);
+    //     console.log("login stst-",items);
+    // },[loginstatus])
 
   return (
 
     <div className='login-outter'>
         
+        
             {
                 loginstatus 
                 ?
-                <div className='suc-msg'><h2>Successfully login</h2></div>
+                <div className='suc-msg'>
+                    <h2>Successfully login</h2>
+                </div>
                 
-                 :
+                :
                 <div className='login-card-outer'>
                     <div className='login-card-one'>
                         <h2>Login</h2>
@@ -80,15 +83,18 @@ const Loginfn = () => {
 
                     <div className='login-card-two'>
                     
-                        Username- <input type="text" id="username" onChange={updateData} value={loginformdata.username} />
+                        Username- <input type="text" id="username" />
+                        {/* onChange={updateData} value={loginformdata.username}  */}
                         
                         <br></br>
                         <br></br>
-                        Password- <input type="password" id="password" onChange={updateData} value={loginformdata.password}/>
+                        Password- <input type="password" id="password" />
+                        {/* onChange={updateData} value={loginformdata.password} */}
                         <br></br>
                         <br></br>
                         <br></br>
-                        <button className='btn-loginfn' onClick={loginfn}>Login</button>
+                        <button className='btn-loginfn' >Login</button> 
+                        {/* onClick={loginfn} */}
                         <br></br>
                         <br></br>
                         <Link to={`/register`}>

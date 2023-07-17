@@ -186,8 +186,11 @@
 /* catogory page */
 
 .displayone{
-    columns: 50px 5;
-    border: 2px solid blue;
+    display: grid;
+    grid: auto auto / auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    height: 100vh;
     
 }
 .displayitem{
@@ -197,6 +200,7 @@
     width: 90%;
     height: 50%;
     border-radius: 5px;
+    
     
     margin: 10px;
 } 
@@ -359,9 +363,16 @@
 
 .footer-outer{
     background-color: rgb(8, 22, 57);
-    height: 200px;
+    height: 100px;
+    display: block;
+    margin-top: 100%;
+    
 }
-
+.footer-inner{
+    color: white;
+    width: 400px;
+    margin-left: 30%;
+}
 
 
 

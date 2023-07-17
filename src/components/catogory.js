@@ -4,6 +4,7 @@ import { Link ,useNavigate } from "react-router-dom";
 import Bannerone from "./bannerone";
 import '../styles/App.css';
 import { AiOutlineStar } from "react-icons/ai";
+import Footercomp from "./footer";
 
 const Catogory = () => {
 
@@ -29,9 +30,9 @@ const Catogory = () => {
   console.log("record data is cat page --------------------",context.record);
   return (
     <div>
-        
+        <Bannerone/>
         <div className="displayone">
-
+            
             {
                 context.record.map((item,index) => (
                     <div className="displaytwo">
@@ -42,9 +43,9 @@ const Catogory = () => {
                             <div className="display-rate1">
                                 $ {item.price}
                             </div>
-                            {/* <div className="display-rate2">
-                                {item.rating.rate} <AiOutlineStar/>
-                            </div> */}
+                            <div className="display-rate2">
+                                {item.rating && item.rating.rate} <AiOutlineStar/>
+                            </div>
                         </div>
                             
                         <button className="btn-cat" onClick={()=>veiwpro(item.id)}>View</button>
@@ -54,7 +55,9 @@ const Catogory = () => {
                 ))
             }
         </div>
+        <Footercomp/>
     </div>
+    
   )
 }
 

@@ -32,8 +32,6 @@ const App = () => {
     password: '',
   }
 
-//state object for formdata
-
   useEffect(() => {
 
     function fetchData() {
@@ -51,9 +49,8 @@ const App = () => {
 
     fetchData();
   }, []);
+  
 
-
-console.log("record data is --------------------",record);
   return (
     <div id="main">
           <Appdata.Provider value={{ data, setData, cart, setCart ,loginstatus ,setStatus ,loginformdata, setFormdata ,productid, setProductid ,record,setRecord}}> 

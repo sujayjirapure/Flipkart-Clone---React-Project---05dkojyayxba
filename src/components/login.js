@@ -5,58 +5,57 @@ import '../styles/App.css';
 
 const Loginfn = () => {
 
-    const {loginstatus ,setStatus} = useContext(Appdata);
-    const {loginformdata, setFormdata} = useContext(Appdata);
+    const initialData = {
+        username: '',
+        password: '',
+    }
 
-   
+    //state object for formdata
+    const [loginformdata, setFormdata] = useState(initialData);
+     //state variable to check form submission status
+     const [loginstatus, setStatus] = useState(false);
+
     //state objetc for error data
     //const [formerror, setFormerror] = useState({});
     //state varibel to store api data response
     //const [apiresponse, setApiresponse] = useState({});
 
-    // const updateData = (e) => {
-    //     console.log(e.target.id, e.target.value);
-    //     let tempObj = {};
-    //     tempObj[e.target.id] = e.target.value.trim();
-    //     setFormdata({
-    //         ...loginformdata, ...tempObj
-    //     });
-    // }
-    
+    const updateData = (e) => {
+        console.log(e.target.id, e.target.value);
+        let tempObj = {};
+        tempObj[e.target.id] = e.target.value.trim();
+        setFormdata({
+            ...loginformdata, ...tempObj
+        });
+    }
 
-    // const loginfn = () => {
-    //     //console.log(loginformdata.username);
-    //     //console.log(loginformdata.password);
-    //     //setStatus(true);
-    //     let temp = JSON.parse(localStorage.getItem('user'));
-    //     let username = loginformdata.username;
-    //     let password = loginformdata.password;
+    const loginfn = () => {
 
-    //     for(let i=0; i<temp.length ; i++){
-    //         if(temp[i].username === loginformdata.username){
-    //             if(temp[i].password === loginformdata.password){
-    //                 setStatus(true);
-    //             }
-    //         }
-    //     }
+        //setStatus(true);
+        let temp = JSON.parse(localStorage.getItem('user'));
+        let username = loginformdata.username;
+        let password = loginformdata.password;
 
-    //     //setFormdata(initialData);
-    // }
+        for(let i=0; i<temp.length ; i++){
+            if(temp[i].username === loginformdata.username){
+                if(temp[i].password === loginformdata.password){
+                    setStatus(true);
+                }
+            }
+        }
 
-    //navigate
-    // const tempnavigate = useNavigate();
-    // const logoutfn = () => {
-    //     tempnavigate('./register');
-    // }
+        setFormdata(initialData);
+    }
 
+    useEffect(() => {
+        let temp = localStorage.getItem('user');   //getting data from loacl storage (syntax)
+        console.log(JSON.parse(temp));
+    },[loginstatus])
 
-    // useEffect(() => {
-    //     //let temp = localStorage.getItem('user');   //getting data from loacl storage (syntax)
-    //     //console.log(JSON.parse(temp));
-    //     const items = JSON.parse(localStorage.getItem('user'));
-    //     console.log("login stst-",loginstatus);
-    //     console.log("login stst-",items);
-    // },[loginstatus])
+    const logoutfn = () => {
+        setStatus(false);
+    }
+
 
   return (
 
@@ -83,17 +82,17 @@ const Loginfn = () => {
 
                     <div className='login-card-two'>
                     
-                        Username- <input type="text" id="username" />
-                        {/* onChange={updateData} value={loginformdata.username}  */}
+                        Username- <input type="text" id="username" onChange={updateData} value={loginformdata.username} />
+                        
                         
                         <br></br>
                         <br></br>
-                        Password- <input type="password" id="password" />
-                        {/* onChange={updateData} value={loginformdata.password} */}
+                        Password- <input type="password" id="password" onChange={updateData} value={loginformdata.password} />
+                        
                         <br></br>
                         <br></br>
                         <br></br>
-                        <button className='btn-loginfn' >Login</button> 
+                        <button className='btn-loginfn'  onClick={loginfn}>Login</button> 
                         {/* onClick={loginfn} */}
                         <br></br>
                         <br></br>

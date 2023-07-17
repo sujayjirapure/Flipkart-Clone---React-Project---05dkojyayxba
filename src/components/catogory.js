@@ -27,7 +27,7 @@ const Catogory = () => {
     let tempnew = context.data.find((item)=> val === item.id);
     context.setCart([...context.cart, tempnew]);
   }
-  console.log("record data is cat page --------------------",context.record);
+  
   return (
     <div>
         <Bannerone/>

@@ -5,19 +5,13 @@ import {Appdata} from './App'
 
 const Menubar = () => {
   const context = useContext(Appdata);
-  
- // const [input, setInput] = useState("");
 
-  //console.log("data is inside that menubar-",context.data); 
-  // const handlechnage = (value) => {
-  //   context.setSerachinput(value);   //input send to app.js
-  // };
   const filter = (event) => {
     context.setRecord(
       context.data.filter((f) => f.title.toLowerCase().includes(event.target.value))
     );
   };
-  console.log("record data is cat page --------------------",context.record);
+  
 
   const logoutfn = () => {
     context.setStatus(false);
